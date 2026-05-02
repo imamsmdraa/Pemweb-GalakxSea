@@ -88,6 +88,13 @@ export function AdminPanel() {
     }
   };
 
+  const buildCreaturePayload = () => ({
+    name: formData.name,
+    depth: Number(formData.depth),
+    description: formData.description,
+    imageUrl: formData.imageUrl,
+  });
+
   const handleEnterLocalMode = () => {
     setUseLocalMode(true);
     setIsLoggedIn(true);
@@ -97,21 +104,23 @@ export function AdminPanel() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    const creaturePayload = buildCreaturePayload();
+
     try {
       if (useLocalMode) {
         if (editingCreature) {
-          localStorageAPI.updateCreature(editingCreature.id, formData);
+          localStorageAPI.updateCreature(editingCreature.id, creaturePayload);
           toast.success("Data berhasil diupdate");
         } else {
-          localStorageAPI.addCreature(formData);
+          localStorageAPI.addCreature(creaturePayload);
           toast.success("Data berhasil ditambahkan");
         }
       } else {
         if (editingCreature) {
-          await api.updateCreature(editingCreature.id, formData, accessToken);
+          await api.updateCreature(editingCreature.id, creaturePayload, accessToken);
           toast.success("Data berhasil diupdate");
         } else {
-          await api.createCreature(formData, accessToken);
+          await api.createCreature(creaturePayload, accessToken);
           toast.success("Data berhasil ditambahkan");
         }
       }
