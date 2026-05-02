@@ -1,4 +1,4 @@
-# Website Eksplorasi Laut Dalam
+# PEMBWEB-GALAXSEA
 
 Website interaktif untuk menjelajahi kedalaman laut yang terinspirasi dari neal.fun/deep-sea. Scroll ke bawah untuk mengeksplorasi berbagai hewan laut di kedalaman yang berbeda.
 
