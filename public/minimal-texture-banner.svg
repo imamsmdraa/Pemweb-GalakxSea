@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="500" viewBox="0 0 1600 500" fill="none" role="img" aria-label="Minimal textured web banner with torn paper wave divider">
+  <defs>
+    <linearGradient id="tealGradient" x1="0" y1="180" x2="0" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0199A8"/>
+      <stop offset="0.58" stop-color="#008D9F"/>
+      <stop offset="1" stop-color="#0B7686"/>
+    </linearGradient>
+
+    <filter id="softBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.6"/>
+    </filter>
+
+    <filter id="tinyBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="0.8"/>
+    </filter>
+
+    <filter id="grain" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="12" result="noise" />
+      <feColorMatrix in="noise" type="saturate" values="0" result="mono" />
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.035" />
+      </feComponentTransfer>
+    </filter>
+
+    <clipPath id="bottomClip">
+      <path d="M0 122 C 110 116, 180 92, 290 100 C 400 108, 505 135, 620 127 C 740 119, 835 91, 965 100 C 1090 109, 1188 137, 1315 127 C 1438 117, 1510 95, 1600 104 L 1600 500 L 0 500 Z"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1600" height="500" fill="#E7E8BF"/>
+
+  <path d="M0 122 C 110 116, 180 92, 290 100 C 400 108, 505 135, 620 127 C 740 119, 835 91, 965 100 C 1090 109, 1188 137, 1315 127 C 1438 117, 1510 95, 1600 104 L 1600 500 L 0 500 Z" fill="url(#tealGradient)"/>
+
+  <g clip-path="url(#bottomClip)" opacity="0.9">
+    <g filter="url(#tinyBlur)" fill="#FFFFFF">
+      <circle cx="34" cy="190" r="3.1" opacity="0.26"/>
+      <circle cx="112" cy="230" r="2.4" opacity="0.17"/>
+      <circle cx="206" cy="320" r="3.7" opacity="0.22"/>
+      <circle cx="292" cy="244" r="1.9" opacity="0.26"/>
+      <circle cx="404" cy="198" r="1.7" opacity="0.18"/>
+      <circle cx="512" cy="286" r="2.8" opacity="0.20"/>
+      <circle cx="624" cy="350" r="1.8" opacity="0.19"/>
+      <circle cx="731" cy="226" r="2.2" opacity="0.16"/>
+      <circle cx="844" cy="301" r="3.1" opacity="0.22"/>
+      <circle cx="944" cy="206" r="1.8" opacity="0.18"/>
+      <circle cx="1056" cy="259" r="2.9" opacity="0.21"/>
+      <circle cx="1168" cy="332" r="2.1" opacity="0.17"/>
+      <circle cx="1278" cy="223" r="3.4" opacity="0.23"/>
+      <circle cx="1386" cy="279" r="2.0" opacity="0.18"/>
+      <circle cx="1492" cy="318" r="2.7" opacity="0.20"/>
+      <circle cx="1562" cy="211" r="1.6" opacity="0.16"/>
+      <circle cx="88" cy="402" r="2.7" opacity="0.15"/>
+      <circle cx="365" cy="381" r="1.7" opacity="0.13"/>
+      <circle cx="575" cy="416" r="2.4" opacity="0.14"/>
+      <circle cx="889" cy="396" r="1.9" opacity="0.15"/>
+      <circle cx="1237" cy="409" r="2.2" opacity="0.14"/>
+    </g>
+
+    <g filter="url(#softBlur)" fill="#DDF7F3" opacity="0.12">
+      <circle cx="180" cy="176" r="14"/>
+      <circle cx="458" cy="214" r="10"/>
+      <circle cx="797" cy="188" r="12"/>
+      <circle cx="1210" cy="236" r="9"/>
+      <circle cx="1420" cy="200" r="13"/>
+    </g>
+  </g>
+
+  <path d="M0 122 C 110 116, 180 92, 290 100 C 400 108, 505 135, 620 127 C 740 119, 835 91, 965 100 C 1090 109, 1188 137, 1315 127 C 1438 117, 1510 95, 1600 104" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M0 122 C 110 116, 180 92, 290 100 C 400 108, 505 135, 620 127 C 740 119, 835 91, 965 100 C 1090 109, 1188 137, 1315 127 C 1438 117, 1510 95, 1600 104" stroke="#F7F8EA" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+
+  <rect width="1600" height="500" filter="url(#grain)" opacity="0.22"/>
+</svg>
