@@ -1,42 +1,107 @@
-# galaxsea-project
+# Website Eksplorasi Laut Dalam
 
-This template should help get you started developing with Vue 3 in Vite.
+Website interaktif untuk menjelajahi kedalaman laut yang terinspirasi dari neal.fun/deep-sea. Scroll ke bawah untuk mengeksplorasi berbagai hewan laut di kedalaman yang berbeda.
 
-## Recommended IDE Setup
+## Fitur Utama
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+### Frontend
+- **Scrolling Vertikal Interaktif**: Scroll untuk menyelami kedalaman laut hingga 11,000+ meter
+- **Gradient Background Dinamis**: Warna berubah dari biru terang ke hitam pekat seiring kedalaman
+- **Smooth Animations**: Menggunakan Framer Motion untuk animasi halus dan efek parallax
+- **Hewan Laut Interaktif**: Klik hewan untuk melihat detail dalam modal pop-up
+- **Indikator Kedalaman**: Menampilkan kedalaman real-time saat scroll
+- **Efek Gelembung**: Animasi gelembung untuk suasana bawah laut yang immersive
+- **Responsive Design**: Optimized untuk desktop dan mobile
 
-## Recommended Browser Setup
+### Backend & Admin Panel
+- **Autentikasi Admin**: Login/logout dengan Supabase Auth
+- **CRUD Lengkap**: 
+  - Tambah hewan laut baru
+  - Edit data hewan existing
+  - Hapus hewan laut
+  - Lihat semua hewan dalam database
+- **Upload Gambar**: Support URL gambar untuk foto hewan
+- **Setup Wizard**: Guided setup untuk membuat admin pertama dan seed data
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+## Teknologi
 
-## Type Support for `.vue` Imports in TS
+- **Frontend**: React.js + TypeScript
+- **Styling**: Tailwind CSS v4
+- **Animasi**: Framer Motion (Motion)
+- **Backend**: Supabase
+  - Database: PostgreSQL (Key-Value Store)
+  - Auth: Supabase Authentication
+  - API: Supabase Edge Functions (Hono)
+- **Icons**: Lucide React
+- **Notifications**: Sonner (Toast)
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## Cara Menggunakan
 
-## Customize configuration
+### Pertama Kali (Setup)
+1. Aplikasi akan menampilkan Setup Wizard
+2. Buat akun admin dengan:
+   - Nama
+   - Email
+   - Password (minimal 6 karakter)
+3. Pilih untuk menambah data sample atau mulai kosong
+4. Selesai! Website siap digunakan
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+### Menjelajahi Laut
+- Scroll ke bawah untuk menyelami kedalaman laut
+- Perhatikan perubahan warna dari biru ke hitam
+- Klik pada hewan laut untuk melihat detail:
+  - Nama
+  - Kedalaman habitat
+  - Deskripsi lengkap
+  - Foto
 
-## Project Setup
+### Mengelola Data (Admin)
+1. Klik tombol di pojok kanan bawah
+2. Login dengan akun admin
+3. Di Admin Panel:
+   - Tambah hewan baru dengan form
+   - Edit hewan existing dengan klik ikon pensil
+   - Hapus hewan dengan klik ikon tempat sampah
+   - Lihat semua hewan dalam list
 
-```sh
-npm install
-```
+## Struktur Data Hewan Laut
 
-### Compile and Hot-Reload for Development
+Setiap hewan laut memiliki:
+- **Nama**: Nama spesies
+- **Kedalaman**: Dalam meter (menentukan posisi di scroll)
+- **Deskripsi**: Informasi tentang hewan
+- **URL Gambar**: Link ke foto hewan
 
-```sh
-npm run dev
-```
+## Zona Kedalaman
 
-### Type-Check, Compile and Minify for Production
+- **0m**: Permukaan
+- **0-200m**: Zona Epipelagik (Sinar matahari)
+- **200-1000m**: Zona Mesopelagik (Twilight zone)
+- **1000-4000m**: Zona Bathypelagik (Midnight zone)
+- **4000-6000m**: Zona Abisopelagik (Abyssal zone)
+- **6000m+**: Zona Hadal (Palung terdalam)
 
-```sh
-npm run build
-```
+## API Endpoints
+
+### Public
+- `GET /creatures` - Ambil semua hewan laut
+
+### Protected (Perlu autentikasi)
+- `POST /creatures` - Tambah hewan baru
+- `PUT /creatures/:id` - Update hewan
+- `DELETE /creatures/:id` - Hapus hewan
+
+### Auth
+- `POST /admin/signup` - Daftar admin baru
+
+## Deployment
+
+Website ini berjalan di Figma Make environment dengan:
+- Vite development server (auto-running)
+- Supabase backend (sudah terkonfigurasi)
+- Auto-reload saat ada perubahan code
+
+## Credits
+
+Dibuat dengan Claude Code untuk eksplorasi laut interaktif.
+Terinspirasi dari neal.fun/deep-sea
