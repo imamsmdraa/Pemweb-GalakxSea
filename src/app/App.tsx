@@ -64,8 +64,10 @@ export default function App() {
 
   if (isLoading) {
     return (
-      <div className="size-full flex items-center justify-center bg-gradient-to-br from-blue-900 to-black">
-        <div className="text-white text-xl">Memuat...</div>
+      <div className="flex min-h-screen items-center justify-center bg-[#8dc9e7]">
+        <div className="rounded-full border border-white/30 bg-white/20 px-6 py-3 text-white/95 shadow-lg backdrop-blur-md">
+          Memuat...
+        </div>
       </div>
     );
   }

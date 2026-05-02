@@ -166,9 +166,29 @@ export function AdminPanel() {
     <>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-4 shadow-lg z-50 transition-colors"
+        className="fixed top-8 left-1/2 -translate-x-1/2 z-50 inline-flex items-center gap-2 rounded-full border border-white/30 bg-sky-300/55 px-5 py-3 text-white shadow-[0_10px_30px_rgba(255,255,255,0.15)] backdrop-blur-md transition-all hover:bg-sky-300/70 hover:shadow-[0_14px_40px_rgba(255,255,255,0.2)]"
       >
-        {isLoggedIn ? <Edit className="w-6 h-6" /> : <LogIn className="w-6 h-6" />}
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 24 24"
+          className="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z" />
+          <path d="M12 2v2" />
+          <path d="M12 20v2" />
+          <path d="m4.93 4.93 1.41 1.41" />
+          <path d="m17.66 17.66 1.41 1.41" />
+          <path d="M2 12h2" />
+          <path d="M20 12h2" />
+          <path d="m6.34 17.66-1.41 1.41" />
+          <path d="m19.07 4.93-1.41 1.41" />
+        </svg>
+        <span className="text-base font-semibold tracking-wide">Admin</span>
       </button>
 
       {isOpen && (

@@ -59,34 +59,34 @@ export function OceanExplorer({ creatures }: OceanExplorerProps) {
         }}
         className="relative overflow-hidden"
       >
-        <div className="sticky top-0 left-0 w-full h-screen pointer-events-none">
+        <div className="pointer-events-none sticky top-0 left-0 z-10 h-screen w-full overflow-hidden">
           <DepthIndicator depth={scrollDepth} />
           <BubbleEffect />
         </div>
 
         <div className="absolute top-0 left-0 w-full">
-          <div className="h-screen flex items-center justify-center">
-            <div className="text-center text-white space-y-4 px-4">
+          <div className="flex h-screen items-center justify-center px-4">
+            <div className="max-w-4xl text-center text-white">
               <motion.h1
-                className="text-5xl md:text-7xl font-bold"
-                initial={{ opacity: 0, y: -50 }}
+                className="text-balance text-5xl font-extrabold leading-none tracking-[-0.04em] md:text-7xl lg:text-8xl"
+                initial={{ opacity: 0, y: -24 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
+                transition={{ duration: 0.9, ease: "easeOut" }}
               >
                 Eksplorasi Laut Dalam
               </motion.h1>
               <motion.p
-                className="text-xl md:text-2xl text-white/80"
+                className="mt-4 text-lg font-medium text-white/90 md:text-2xl"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 0.5 }}
+                transition={{ duration: 0.9, delay: 0.25 }}
               >
                 Scroll ke bawah untuk menjelajahi kedalaman samudra
               </motion.p>
               <motion.div
-                className="text-4xl mt-8"
-                animate={{ y: [0, 20, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
+                className="mt-28 text-6xl font-light text-white"
+                animate={{ y: [0, 10, 0] }}
+                transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
               >
                 ↓
               </motion.div>
@@ -102,22 +102,6 @@ export function OceanExplorer({ creatures }: OceanExplorerProps) {
                 onClick={() => setSelectedCreature(creature)}
               />
             ))}
-
-            <div className="absolute" style={{ top: "200px", left: "10%" }}>
-              <div className="text-white/60 text-lg font-semibold">0m - Permukaan</div>
-            </div>
-            <div className="absolute" style={{ top: "400px", left: "15%" }}>
-              <div className="text-white/60 text-lg font-semibold">200m - Zona Epipelagik</div>
-            </div>
-            <div className="absolute" style={{ top: "2000px", left: "85%" }}>
-              <div className="text-white/60 text-lg font-semibold">1000m - Zona Bathypelagik</div>
-            </div>
-            <div className="absolute" style={{ top: "8000px", left: "20%" }}>
-              <div className="text-white/60 text-lg font-semibold">4000m - Zona Abisopelagik</div>
-            </div>
-            <div className="absolute" style={{ top: "20000px", left: "70%" }}>
-              <div className="text-white/60 text-lg font-semibold">10000m - Palung Mariana</div>
-            </div>
           </div>
         </div>
       </motion.div>
