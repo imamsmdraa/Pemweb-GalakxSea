@@ -188,7 +188,7 @@ export function AdminPanel() {
           <path d="m6.34 17.66-1.41 1.41" />
           <path d="m19.07 4.93-1.41 1.41" />
         </svg>
-        <span className="text-base font-semibold tracking-wide">Admin</span>
+        <span className="text-base font-semibold tracking-wide">Login</span>
       </button>
 
       {isOpen && (
