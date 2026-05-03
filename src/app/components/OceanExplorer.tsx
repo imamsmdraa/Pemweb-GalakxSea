@@ -94,7 +94,7 @@ export function OceanExplorer({ creatures }: OceanExplorerProps) {
             </div>
           </div>
 
-          <Wave height={120} opacity={0.8} />
+          <Wave height={140} opacity={0.95} />
 
           <div className="relative" style={{ height: `${containerHeight - 1000}px` }}>
             {creatures.map((creature, index) => (
