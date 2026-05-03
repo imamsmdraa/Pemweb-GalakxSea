@@ -4,6 +4,7 @@ import { DepthIndicator } from "./DepthIndicator";
 import { SeaCreature } from "./SeaCreature";
 import { CreatureModal } from "./CreatureModal";
 import { BubbleEffect } from "./BubbleEffect";
+import { Wave } from "./wave";
 import { SeaCreature as SeaCreatureType } from "../../utils/supabase";
 
 interface OceanExplorerProps {
@@ -92,6 +93,8 @@ export function OceanExplorer({ creatures }: OceanExplorerProps) {
               </motion.div>
             </div>
           </div>
+
+          <Wave height={120} opacity={0.8} />
 
           <div className="relative" style={{ height: `${containerHeight - 1000}px` }}>
             {creatures.map((creature, index) => (
