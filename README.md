@@ -100,8 +100,3 @@ Website ini berjalan di Figma Make environment dengan:
 - Vite development server (auto-running)
 - Supabase backend (sudah terkonfigurasi)
 - Auto-reload saat ada perubahan code
-
-## Credits
-
-Dibuat dengan Claude Code untuk eksplorasi laut interaktif.
-Terinspirasi dari neal.fun/deep-sea
