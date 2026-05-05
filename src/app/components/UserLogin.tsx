@@ -11,7 +11,7 @@ interface UserLoginProps {
 }
 
 export function UserLogin({ onLoginSuccess, onLogout, isLoggedIn }: UserLoginProps) {
-  const [isOpen, setIsOpen] = useState(!isLoggedIn);
+  const [isOpen, setIsOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
