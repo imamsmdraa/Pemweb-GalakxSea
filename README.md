@@ -23,7 +23,7 @@ Website interaktif untuk menjelajahi kedalaman laut yang terinspirasi dari neal.
 - **Upload Gambar**: Support URL gambar untuk foto hewan
 - **Setup Wizard**: Guided setup untuk membuat admin pertama dan seed data
 
-## Teknologi
+## ===== Teknologi =====
 
 - **Frontend**: React.js + TypeScript
 - **Styling**: Tailwind CSS v4
