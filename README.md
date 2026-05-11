@@ -13,7 +13,7 @@ Website interaktif untuk menjelajahi kedalaman laut yang terinspirasi dari neal.
 - **Efek Gelembung**: Animasi gelembung untuk suasana bawah laut yang immersive
 - **Responsive Design**: Optimized untuk desktop dan mobile
 
-### Backend & Admin Panel
+### ===== Backend & Admin Panel =====
 - **Autentikasi Admin**: Login/logout dengan Supabase Auth
 - **CRUD Lengkap**: 
   - Tambah hewan laut baru
